@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins',sans-serif;
+            box-sizing: border-box;
+        }
+
+        #navbar{
+            height: 70px;
+           
+            
+        }
+        .flex-div{
+           
+            background-color:teal
+           
+        }
+        
+       
+        a{
+            color: white;
+        }
+
+        .flex-div{
+            display: flex;
+            align-items: center;
+        }
+        nav{
+            padding: 8px 2%;
+            justify-content: space-between;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            background: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+
+        }
+        
+        .nav-right .user-icon{
+        width: 30px;
+
+        border-radius: 50%;
+        margin-right: 0; 
+         }
+        .nav-left .menu-icon{
+            width: 23px;
+            height: 18px;
+            margin-right: 25px;
+            
+        }
+        .nav-left .logo{
+            width: 150px;
+           
+            
+        } 
+         .nav-middle .mic-icon{
+            width: 18px;
+        } 
+        .nav-middle .search-box{
+            border: 1px solid #ccc;
+            margin-right: 15px;
+            padding:  15px;
+            border-radius: 20px;
+            background-color: white;
+            
+        }
+        .nav-middle .search-box input{
+            width: 250px;
+            border: 0;
+            outline: 0;
+            font-size:15px
+        }
+        
+        #video_details{
+            margin-top: 0%;
+            height: 500px;
+            padding-top: 0;
+        }
+
+    </style>
+    </head>
+    <body onload="playVideo()" >
+        <nav class="flex-div">
+            <div class="nav-left flex-div">
+            
+
+            <a href="#" class="menu-icon">
+                <i class="fas fa-bars"></i>
+                
+             </a>
+               
+            <img onclick="gotohome()" style="background-color: white;" class="logo" src="https://upload.wikimedia.org/wikipedia/commons/3/34/YouTube_logo_%282017%29.png" alt="">
+
+            </div>
+        <div class="nav-middle flex-div">
+            <div class="search-box flex-div">
+                <input  type="text" id="query" placeholder="Search">
+                <img class="search-btn" onclick="searchVideos()"  alt="">
+            </div> 
+
+        </div>
+        <div class="nav-right flex-div">
+           
+        </div>
+
+    </nav>
+ 
+    <div id="video_details"></div>
+    <div id="video_content">
+    </div>
+        <!-- <iframe width="560" src="" frameborder="0"></iframe> -->
+</body>
+</html>
+
+ <script src="./video.js">
+    </script>

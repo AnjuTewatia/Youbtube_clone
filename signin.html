@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #container {
+      display: flex;
+      /* margin:auto; */
+      /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+    }
+
+    #register-form {
+      width: 40%;
+      height: 450px;
+      /* margin-left:40%; */
+      /* margin-top:70px; */
+      margin: auto;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    form {
+      width: 10%;
+      margin-left: 25%;
+    }
+    input {
+      width: 550%;
+      margin-top: 20px;
+      padding: 5px;
+
+      border-radius: 5%;
+    }
+    h1,
+    button {
+      margin-left: 35%;
+      margin-top: 10px;
+    }
+    button {
+      width: 30%;
+      padding: 3px;
+    }
+
+    p {
+      text-align: center;
+    }
+  </style>
+
+  <body>
+    <div id="container">
+      <div id="register-form">
+        <h1>Register</h1>
+        <form>
+          <input type="text" id="name" placeholder="Name" />
+          <input type="text" id="email" placeholder="Email" />
+          <input type="text" id="username" placeholder="Username" />
+          <input type="text" id="password" placeholder="Password" />
+          <input type="text" id="mobile" placeholder="Mobile" />
+          <input type="text" id="description" placeholder="Description" />
+        </form>
+
+        <button onclick="Register()">Signup</button>
+        <p>Already have account? <a href="login.html">click here</a></p>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="signin.js"></script>

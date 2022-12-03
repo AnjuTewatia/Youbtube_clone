@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+
+<style>
+
+
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'poppins',sans-serif;
+        box-sizing: border-box;
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+
+    img{
+        cursor: pointer;
+    }
+
+    .flex-div{
+        display: flex;
+        align-items: center;
+    }
+
+    nav{
+        padding: 10px 2%;
+        justify-content: space-between;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        background: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+
+    }
+    .nav-right img{
+        width: 35px;
+        height: 32px;
+         margin-right: 25px;
+    }
+    .nav-right .user-icon{
+        width: 30px;
+        border-radius: 50%;
+        margin-right: 0;
+    }
+    .nav-left .menu-icon{
+        width: 20px;
+        height: 20px;
+        margin-right: 20px;
+        
+    }
+    .nav-left .logo{
+        width: 100px;
+        background: none;
+        
+    }
+
+    .nav-middle .mic-icon{
+        width: 25px;
+    }
+
+    .nav-middle .search-box{
+        border: 1px solid #ccc;
+        margin-right: 15px;
+        padding: 10px 15px;
+        border-radius: 20px;
+        
+    }
+
+    .nav-middle .search-box input{
+        width: 300px;
+        border: 0;
+        outline: 0;
+        font-size:15px
+    }
+
+
+    .nav-middle .search-box img{
+        width: 10px;
+    }
+
+    #container{
+        display: grid;
+        grid-template-columns: repeat(4,20%);
+        justify-content: space-between;
+        grid-gap: 2%;
+        text-align: center;
+        cursor: pointer;
+       
+    }
+
+    #main{
+        display: grid;
+        grid-template-columns: repeat(4,20%);
+        justify-content: space-between;
+        grid-gap: 2%;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    img{
+        width: 90%;
+    }
+
+    .search-btn{
+        width: 40px;
+        height: 30px;
+    }
+
+    .sidebar{
+        background: #fff;
+        width: 20%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        padding-left: 2%;
+        padding-top: 80px;
+    }
+
+    .shortcut-links a img{
+        width: 29px;
+        margin-right: 20px;
+    }
+
+    .shortcut-links a{
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        width: fit-content;
+        flex-wrap: wrap;
+    }
+    
+    .slidebar hr{
+        border: 0;
+        height: 1px;
+        background-color: #fff;
+        width: 85%;
+    }
+
+    .subscribed-list h3{
+        font-size: 13px;
+        margin: 20px 0;
+        color:grey;
+    }
+
+    .subscribed-list a{
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        width: fit-content;
+        flex-wrap: wrap;
+    }
+
+    .subscribed-list a img{
+        width: 25px;
+        border-radius: 40%;
+        margin-right: 10px;
+    }
+    /* *************** */
+
+    .small-sidebar{
+        width: 5%;
+
+    }
+
+     .small-sidebar h3{
+        display: none;
+    } 
+
+
+    .small-sidebar hr{
+        width: 50%;
+        margin-bottom:25px ;
+    } 
+
+    #container{
+        
+        padding-left: 25%;
+        padding-right: 2%;
+        padding-top: 5px;
+        padding-bottom: 20px;
+    }
+
+
+    #main{
+        padding-left: 20%;
+        padding-right: 2%;
+        padding-top: 5px;
+        padding-bottom: 20px;
+
+    }
+
+</style>
+</head>
+<body>
+    
+    <nav class="flex-div">
+        <div class="nav-left flex-div">
+            <a href="#" class="menu-icon" id="show-menu">
+               
+                 <img class="menu-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQArIOY4hWajfIZvhwfGmeQwglnJSCQo3QFVg&usqp=CAU" alt="">
+               
+             </a>
+            <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/3/34/YouTube_logo_%282017%29.png" alt="">
+
+        </div>
+
+
+        <div class="nav-middle flex-div">
+            <div class="search-box flex-div">
+                <input  type="text" id="query" placeholder="Search">
+                <img class="search-btn" onclick="searchVideos()"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE0VwARPjOqk1V-y_GD_eCwWTn-o2gSaakdA&usqp=CAU" alt="">
+            </div>
+
+            <img class="mic-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHOBVN8fxdrPp2EPqrKNmkvlF34xDB0zjBXQ&usqp=CAU" alt="">
+            
+
+        </div>
+
+
+        <div class="nav-right flex-div">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNz5kbDok4oSTP0hID5ouLUM-rHTYcy32iYA&usqp=CAU" alt="">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHTW-1UnHzDjAH6ETwe0XLnM2rp0WKQ3wwbA&usqp=CAU" alt="">
+            <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkHLv0PMhlGJCUvvAwW_vIeEjoqOD3tMxwqA&usqp=CAU" alt="">
+           <a href="signin.html"> <img class="user-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkXIbG42yup9dLueIk-dHTqRjTWoej6l1AEQ&usqp=CAU"></a>
+        </div>
+
+    </nav>
+
+
+
+    <!--***************************sidebar*******************  -->
+
+
+    <div class="sidebar">
+        <div class="shortcut-links">
+            
+
+            <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzsFf2WcSixuFRX6DFff_5_8Bukik_7IuW_Q&usqp=CAU" alt=""><p>Home</p></a>
+            <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3qbZQv3ehUpFRYaBrE---B6rtuoEiY5_4vw&usqp=CAU" alt=""><p>Explore</p></a>
+            <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2E_2aSMD0c6q2Q_-t4zuxwldS3k7iX7bPyQ&usqp=CAU" alt=""><p>Subscription</p></a>
+            <hr>
+            <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNgGfXZGAnCLDwx2L4IgXzHdwv9e4p_KISeQ&usqp=CAU" alt=""><p>Library</p></a>
+            <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu_IYQJAm_BkvZe1zOSSBgP3IGALXnjMaOlw&usqp=CAU" alt=""><p>History</p></a>
+            <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnFUgCFysqwZkBTAZm16F_P_Z7DZFIKYIP4Q&usqp=CAU" alt=""><p>Playlist</p></a>
+            <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCCbJgWDfuMKDILZkUjC3KZv138OEE5vlq5Q&usqp=CAU" alt=""><p>Download</p></a>
+            <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQci671fwnjVufArPs_iHZAbqWxJov3-rSeiQ&usqp=CAU" alt=""><p>Show More</p></a> 
+             <hr>
+
+
+        </div>
+
+    </div>
+    <div id="container"></div>
+    <div id="main"> </div>
+</body>
+</html>
+
+<script src="./index.js"></script>
